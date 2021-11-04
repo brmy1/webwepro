@@ -18,7 +18,9 @@ section
           p Movimentação do caixa.
       .row.g-4
         .col-6
-          h3 Um texto descritivo para mais detalhes de visualização de caixa e um bnt centralizado abaixo com redirecionamento.
+          h1(style="font-size: 80px; margin-top: 40px") 2.1002
+          p Total de relatorios.
+
         .col-6
           list-basic(title="Entradas e Saídas" :list="list")
 
@@ -26,7 +28,7 @@ section
         .col
           br
           h4 Extrato
-          p Extrato de metodos de pagamento.
+          p Extrato de pagamento.
 
       .row.g-2
         .col-4

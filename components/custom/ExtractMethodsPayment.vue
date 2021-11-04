@@ -17,28 +17,28 @@ export default {
   name: 'ComponentEstractMethodsPayment',
   props: {
     debit: {
-      type: Number,
-      default: 0
+      type: String,
+      default: ''
     },
     credit: {
-      type: Number,
-      default: 0
+      type: String,
+      default: ''
     },
     money: {
-      type: Number,
-      default: 0
+      type: String,
+      default: ''
     },
     in: {
-      type: Number,
-      default: 0
+      type: String,
+      default: ''
     },
     gain: {
-      type: Number,
-      default: 0
+      type: String,
+      default: ''
     },
     loss: {
-      type: Number,
-      default: 0
+      type: String,
+      default: ''
     },
     column: {
       type: Number,

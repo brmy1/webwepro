@@ -2,11 +2,15 @@
 section
     .brh.agv.aew.rounded.shadow-inner(:style="`background-color: ${color}`")
         span.bpi {{ description }}
-        h4.bph
+        //- .d-none.d-sm-block.d-md-none
+          p.bph
             | {{ value }}
-            small.bpj(v-if="action") {{ action }}
-            small.bpj.bpk(v-else-if="gain") {{ action }}
-            small.bpj.bpl(v-else-if="loss") {{ action }}
+
+        h4.bph
+          | {{ value }}
+          small.bpj(v-if="action") {{ action }}
+          small.bpj.bpk(v-else-if="gain") {{ action }}
+          small.bpj.bpl(v-else-if="loss") {{ action }}
 
 </template>
 
