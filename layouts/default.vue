@@ -4,6 +4,6 @@
         nav-vertical
     .bw
         nuxt
-        footer-default
+        //- footer-default
 
 </template>

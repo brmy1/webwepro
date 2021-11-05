@@ -17,4 +17,4 @@ $ npm run start
 $ npm run generate
 ```
 
-Para mais detalhes acesse [documentation](https://nuxtjs.org).
+Para mais detalhes acesse [documentation](https://bootstrap-themes.github.io/dashboard/index.html).

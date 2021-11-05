@@ -10,8 +10,12 @@ nav.ch
                     small.bql.vi Inicio
             li.pa
                 n-link.oy(to="/cash")
-                    span.bv.blg
+                    span.bv.azl
                     small.bql.vi Caixa
+            li.pa
+                n-link.oy(to="/profile")
+                    span.bv.bns
+                    small.bql.vi Perfil
             li.pa
                 n-link.oy(to="/help")
                     span.bv.bmn

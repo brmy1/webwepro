@@ -2,5 +2,5 @@
 .section
     .row
         .col.mt-10
-            p Rodape
+            p ....
 </template>

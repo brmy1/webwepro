@@ -1,5 +1,8 @@
 <template lang="pug">
     .row.gx-2
+      .col-12(v-if="localization")
+        p @/components/custom/ExtractMethodsPayment.vue
+      .col
         div(:class="`col-${column}`" v-if="debit !== ''")
             card-count(:value="debit" description="debito" gain)
         div(:class="`col-${column}`" v-if="credit !== ''")
@@ -43,6 +46,10 @@ export default {
     column: {
       type: Number,
       default: 3
+    },
+    localization: {
+      type: Boolean,
+      default: false
     }
   }
 }
