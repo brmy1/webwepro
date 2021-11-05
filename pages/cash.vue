@@ -15,14 +15,14 @@ section
           br
           br
           h4 Relatorio
-          p Movimentação do caixa.
+          p Um sumario da movimentação geral.
       .row.g-4
         .col-6
           h1(style="font-size: 80px; margin-top: 40px") 2.1002
-          p Total de relatorios.
+          small Movimentação geral do caixa em relação ao funcionarios.
 
         .col-6
-          list-basic(title="Entradas e Saídas" :list="list")
+          list-basic(title="Movimentação dos usuarios" :list="list")
 
       .row
         .col

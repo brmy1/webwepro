@@ -1,4 +1,6 @@
 <template lang="pug">
-footer
-
+.section
+    .row
+        .col.mt-10
+            p Rodape
 </template>
