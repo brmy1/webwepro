@@ -14,16 +14,17 @@ export default {
     ]
   },
   css: [
-    'bootstrap/scss/bootstrap.scss',
     '@/assets/css/toolkit-inverse.css',
     '@/assets/css/application.css'
   ],
-  plugins: [],
+  plugins: [
+  ],
   components: true,
   buildModules: [
     '@nuxtjs/eslint-module'
   ],
   modules: [
+    'bootstrap-vue/nuxt',
     '@nuxtjs/axios',
     '@nuxtjs/pwa'
   ],

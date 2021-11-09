@@ -1,14 +1,11 @@
 <template lang="pug">
 section
-  header-default(title="Caixa" description="UTC−3 a hora oficial do Brasil." date)
+  header-default(title="Financeiro" description="UTC−3 a hora oficial do Brasil." date)
   .container
     .row
-      .col-12
-        br
-        br
+      .col-12.mt-4
         custom-ExtractMethodsPayment(debit="R$ 1.250,00" credit="R$ 621,12" money="R$ 8.144,10" gain loss :column="4")
         custom-ExtractMethodsPayment(debit credit money gain="R$ 5.000,12" loss="R$ 125,56" :column="6")
-        br
 
     .row
       .col-12
@@ -17,11 +14,11 @@ section
         h4 Relatorio
         p Um sumario da movimentação geral.
     .row.g-4
-      .col-6
+      .col-md-6.col-sm-12
         h1(style="font-size: 80px; margin-top: 40px") 2.1002
         small Movimentação geral do caixa em relação ao funcionarios.
 
-      .col-6
+      .col-md-6
         list-basic(title="Movimentação dos usuarios" :list="list")
 
     .row
@@ -31,11 +28,11 @@ section
         p Extrato de pagamento.
 
     .row.g-2
-      .col-4
+      .col-md-4.col-sm-12
         list-basic(title="Dinheiro" :list="money")
-      .col-4
+      .col-md-4.col-sm-12
         list-basic(title="Débito" :list="debit")
-      .col-4
+      .col-md-4.col-sm-12
         list-basic(title="Crédito" :list="credit")
 
     //- .row

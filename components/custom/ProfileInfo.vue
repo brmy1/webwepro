@@ -7,26 +7,26 @@
 
             .row
                 .col-3
-                    h1 {{ img }}
+                    thumbnails-default(:size="142")
 
                 .col
                     .row.mt-1
                         .col-12
-                            h5 {{ fullname }}
+                            h3 {{ fullname }}
                             p {{ email }}
                     .row.mt-2
                         .col-3
                             small Serviços
-                            h6 {{ services }}
+                            h4 {{ services }}
                         .col
                             small Ganhos
-                            h6 {{ gain }}
+                            h4 {{ gain }}
                         .col
                             small Gastos
-                            h6 {{ loss }}
+                            h4 {{ loss }}
                         .col-2
                             small Agenda
-                            h6 {{ schedule }}
+                            h4 {{ schedule }}
 </template>
 
 <script>
