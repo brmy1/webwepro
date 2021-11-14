@@ -1,7 +1,7 @@
 <template lang="pug">
 nav
     .container
-        .grid.grid-flow-col
+        //- .grid.grid-flow-col
             n-link.bqc.brd(to='/')
                 span.bv.bhc.bqd
 

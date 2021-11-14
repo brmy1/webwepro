@@ -1,30 +1,30 @@
 <template lang="pug">
     card-default
         .container
-            .row(v-if="localization")
-                .col
+            b-row(v-if="localization")
+                b-col
                     small @/components/custom/ProfileInfo.vue
 
-            .row
-                .col-3
+            b-row
+                b-col(sm="12" md="3")
                     thumbnails-default(:size="142")
 
-                .col
-                    .row.mt-1
-                        .col-12
+                b-col
+                    b-row
+                        b-col(sm="12" md="12")
                             h3 {{ fullname }}
                             p {{ email }}
-                    .row.mt-2
-                        .col-3
+                    b-row.mt-2
+                        b-col(sm="12" md="3")
                             small Serviços
                             h4 {{ services }}
-                        .col
+                        b-col
                             small Ganhos
                             h4 {{ gain }}
-                        .col
+                        b-col
                             small Gastos
                             h4 {{ loss }}
-                        .col-2
+                        b-col(sm="12" md="2")
                             small Agenda
                             h4 {{ schedule }}
 </template>
