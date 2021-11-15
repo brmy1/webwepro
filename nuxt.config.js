@@ -26,7 +26,8 @@ export default {
   modules: [
     'bootstrap-vue/nuxt',
     '@nuxtjs/axios',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    'nuxt-uid-module'
   ],
   axios: {},
   pwa: {

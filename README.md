@@ -1,9 +1,12 @@
 # webwepro
 
+Fiquem a vontade para estudar meu código. Arquivos de db não seram disponibilizados.
+Instale o nodejs e seja feliz.
+
 ## Build Setup
 
 ```bash
-# install dependencies
+# Antes de tudo instale as dependencias e depois npm run dev.
 $ npm install
 
 # serve with hot reload at localhost:3000
@@ -17,4 +20,4 @@ $ npm run start
 $ npm run generate
 ```
 
-Para mais detalhes acesse [documentation](https://bootstrap-themes.github.io/dashboard/index.html).
+Para mais detalhes acesse [documentacao](https://bootstrap-themes.github.io/dashboard/index.html).
