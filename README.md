@@ -1,6 +1,6 @@
 # webwepro
 
-Fiquem a vontade para estudar meu código. Arquivos de db não seram disponibilizados.
+Fiquem a vontade para estudar meu código. Arquivos de db não serão disponibilizados.
 Instale o nodejs e seja feliz.
 
 ## Build Setup
