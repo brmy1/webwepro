@@ -6,7 +6,7 @@ b-form
       small Informação básica do usuário
 
     b-col
-      thumbnails-default
+      //- thumbnails-default
       input(type="file" @change="event => upladProfileImage(event)")
 
   b-row.mt-3
