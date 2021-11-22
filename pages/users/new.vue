@@ -60,7 +60,7 @@ b-form
 </template>
 
 <script>
-import Upload from '@/api/Upload'
+// import Upload from '@/api/Upload'
 
 export default {
   name: 'NewUserPage',
@@ -71,7 +71,7 @@ export default {
   }),
   methods: {
     upladProfileImage (file) {
-      Upload.ProfilePicture(file)
+      // Upload.ProfilePicture(file)
     }
   }
 }

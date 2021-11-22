@@ -3,7 +3,7 @@ nav
   .row
     .bqn
       .bqo
-        h6.bqq {{ description }}
+        h6.bqq.text-secondary {{ description }}
         h3.bqp {{ title }}
 
       .bqr(v-if="date")

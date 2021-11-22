@@ -9,41 +9,53 @@ section
       b-col(sm="12" md="8")
         b-row.g-2
           b-col(cols="12")
-            card-default
-              b-row
-                b-col(cols="12")
-                  h5 Pesquisar produtos e serviços
-                  form.mt-4.col-12.col-lg-auto.mb-3.mb-lg-0.me-lg-3
-                    input.form-control.form-control-dark(type='search' placeholder='Pesquisar...' aria-label='Pesquisar')
+            .p-4
+              card-default
+                b-row
+                  b-col(cols="12")
+                    h2 Pesquisar produtos e serviços
+                    form.mt-4.col-12.col-lg-auto.mb-3.mb-lg-0.me-lg-3
+                      input.form-control.form-control-dark(type='search' placeholder='Pesquisar...' aria-label='Pesquisar')
 
           b-col(cols="12")
             card-default
-              small Subtotal
-              h3 1.668,14
+              .p-3
+                small.h6 Subtotal
+                h2 1.668,14
         b-row.g-2
           b-col
             card-default
-              small Total recebido
-              h3 R$ 11,00
+              .p-3
+                small.h6 Total recebido
+                h2 R$ 11,00
           b-col
             card-default
-              small Troco
-              h3 R$ 0
+              .p-3
+                small.h6 Troco
+                h2 R$ 0
 
       b-col
         b-row
           b-col(cols="12")
             card-default
-              small Código de barras
-              h4 132546848456
+              .p-3
+                small.h6 Código de barras
+                h2 132546848456
           b-col(cols="12")
             card-default
-              small Valor Unitario
-              h4 R$ 2.665,00
+              .p-3
+                small.h6 Valor Unitario
+                h2 R$ 2.665,00
           b-col(cols="12")
             card-default
-              small Código interno
-              h4 45689755312
+              .p-3
+                small.h6 Código interno
+                h2 45689755312
+
+    b-row.mt-4
+      b-col
+        card-default
+          h1 oi mundo
 
 </template>
 

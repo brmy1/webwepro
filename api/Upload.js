@@ -2,10 +2,7 @@
 /* eslint-disable node/handle-callback-err */
 /* eslint-disable no-unused-expressions */
 
-const firebase = false
-
-// import firebase from 'firebase'
-// import 'firebase/storage'
+import * as storage from 'firebase'
 
 class Upload {
   constructor () {
@@ -14,7 +11,7 @@ class Upload {
 
   ProfilePicture (event) {
     const file = event.target.files[0]
-    const storageRef = firebase.storage().ref()
+    const storageRef = storage.firebase.storage().ref()
     const uploadTask = storageRef.child(`images/profile/${file.name}`).put(file)
 
     uploadTask.on('state_changed', function (snapshot) {
@@ -22,10 +19,10 @@ class Upload {
       console.log('Upload is ' + progress + '% done')
 
       switch (snapshot.state) {
-        case firebase.storage.TaskState.PAUSED:
+        case storage.firebase.storage.TaskState.PAUSED:
           console.log('Upload is paused')
           break
-        case firebase.storage.TaskState.RUNNING:
+        case storage.firebase.storage.TaskState.RUNNING:
           console.log('Upload is running')
           break
       }
