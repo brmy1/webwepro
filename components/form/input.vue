@@ -1,20 +1,22 @@
 <template lang="pug">
-    b-row
-        b-col
-            template(v-if="type !== 'file'")
-                label(:for='id') {{ label }}
-                the-mask.input_text(v-if='mask.length', :id='id', :class='inputClass', :type='type', :value='value', :mask='mask', :masked='masked', :readonly='readonly', :autocomplete='autocomplete', :placeholder='placeholder', @input="$event => $emit('input', $event)")
-                    money.input_text(v-else-if="type === 'money'", :class='inputClass', :value='value', v-bind='money', :autocomplete='autocomplete', @input="$event => $emit('input', $event)")
-                        input.input_text(v-else='', :id='id', :class='inputClass', :type='type', :value='value', :readonly='readonly', :autocomplete='autocomplete', :placeholder='placeholder', @input="$event => $emit('input', $event.target.value)")
-            template(v-else='')
-                label(:for='id') {{ label }}
-                input(:id='id', hidden='', type='file', @input='inputFile')
-                label.input_text(:id='`file-label-${id}`', :for='id')
-                    | {{ fileName }}
-            small.input-error  {{ error }}
+  b-row
+    b-col
+      b-form-group#fieldset-zip(description='Endereço CEP.' label='CEP' label-for='input-zip' valid-feedback='Thank you!' :invalid-feedback='invalidFeedback' :state='state')
+        b-form-input#input-zip(v-model='name' :state='state' trim)
 
-            b-form-group#fieldset-zip(description='Endereço CEP.' label='CEP' label-for='input-zip' valid-feedback='Thank you!' :invalid-feedback='invalidFeedback' :state='state')
-                b-form-input#input-zip(v-model='name' :state='state' trim)
+    //- b-col
+        template(v-if="type !== 'file'")
+            label(:for='id') {{ label }}
+            the-mask.input_text(v-if='mask.length', :id='id', :class='inputClass', :type='type', :value='value', :mask='mask', :masked='masked', :readonly='readonly', :autocomplete='autocomplete', :placeholder='placeholder', @input="$event => $emit('input', $event)")
+                money.input_text(v-else-if="type === 'money'", :class='inputClass', :value='value', v-bind='money', :autocomplete='autocomplete', @input="$event => $emit('input', $event)")
+                    input.input_text(v-else='', :id='id', :class='inputClass', :type='type', :value='value', :readonly='readonly', :autocomplete='autocomplete', :placeholder='placeholder', @input="$event => $emit('input', $event.target.value)")
+        template(v-else='')
+            label(:for='id') {{ label }}
+            input(:id='id', hidden='', type='file', @input='inputFile')
+            label.input_text(:id='`file-label-${id}`', :for='id')
+                | {{ fileName }}
+        small.input-error  {{ error }}
+
 </template>
 
 <script>

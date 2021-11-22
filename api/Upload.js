@@ -2,8 +2,10 @@
 /* eslint-disable node/handle-callback-err */
 /* eslint-disable no-unused-expressions */
 
-import firebase from 'firebase'
-import 'firebase/storage'
+const firebase = false
+
+// import firebase from 'firebase'
+// import 'firebase/storage'
 
 class Upload {
   constructor () {

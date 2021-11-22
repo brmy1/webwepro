@@ -60,6 +60,8 @@ b-form
 </template>
 
 <script>
+import Upload from '@/api/Upload'
+
 export default {
   name: 'NewUserPage',
   data: () => ({
@@ -69,8 +71,7 @@ export default {
   }),
   methods: {
     upladProfileImage (file) {
-      // eslint-disable-next-line no-console
-      console.warn(file.target.files)
+      Upload.ProfilePicture(file)
     }
   }
 }

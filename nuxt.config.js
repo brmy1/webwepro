@@ -18,6 +18,7 @@ export default {
     '@/assets/css/application.css'
   ],
   plugins: [
+    '@/plugins/firebase'
   ],
   components: true,
   buildModules: [

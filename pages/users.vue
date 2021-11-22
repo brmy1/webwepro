@@ -16,7 +16,8 @@
                   v-for="i in menuOptions"
                   :key="i.link"
                   :class="`${i.link === $route.path ? 'bg-primary':'bgdark'}`"
-                  @click.prevent="goPage(i.link)")
+                  @click.prevent="goPage(i.link)"
+                  )
                   .d-flex.w-100.justify-content-between
                     h6 {{ i.name }}
                       br

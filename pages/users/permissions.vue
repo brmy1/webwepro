@@ -1,5 +1,5 @@
 <template lang="pug">
-  p Permissões de usuário, funfando lindamente. "2
+  p Permissões de usuário.
 </template>
 
 <script>
