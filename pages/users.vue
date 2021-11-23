@@ -2,34 +2,14 @@
   section
     b-container
       b-row
-        b-col
+        b-col(cols="6")
           header-default.mb-5(title="Usuários" description="WebwePRO")
+        b-col(cols="6")
+          p Adicionar usuário
+
+      b-row
+        b-col
           nuxt
-
-        //- b-col
-          header-default.mb-3(title="Usuários" description="WebwePRO")
-          //-
-            hr.bre.aez
-            b-button(v-b-modal.modalCenter2) Launch centered modal
-            modal-default(id="modalCenter2")
-
-          b-row
-            b-col.mt-4
-              b-list-group
-                b-list-group-item.flex-column.align-items-start.p-4(
-                  v-for="i in menuOptions"
-                  :key="i.link"
-                  :class="`${i.link === $route.path ? 'bg-primary':'bgdark'}`"
-                  @click.prevent="goPage(i.link)"
-                  )
-                  .d-flex.w-100.justify-content-between
-                    h6 {{ i.name }}
-                      br
-                      small(:class="`${$route.path === i.link || 'text-muted'}`") {{ i.desc }}
-          b-row
-            b-col(sm="hidden")
-              hr.bre.aez
-              small WebwePRO. Todos os direitos reservados.
 
 </template>
 
@@ -71,8 +51,12 @@ export default {
     ]
   }),
   methods: {
-    goPage (i) {
+    GoPage (i) {
       this.$router.push(i)
+    },
+
+    AddAccount () {
+      return false
     }
   }
 }

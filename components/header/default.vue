@@ -1,23 +1,20 @@
 <template lang="pug">
 nav
-  .row
-    .bqn
-      .bqo
-        h6.bqq.text-secondary {{ description }}
-        h2.bqp {{ title }}
+  b-row
+    b-col
+      h6.bqq.text-secondary {{ description }}
+      h2.bqp {{ title }}
 
-      .bqr(v-if="date")
+    b-col(v-if="date" cols="6")
+      .bpy.bqt.align-bottom
+        input.form-control(type='text' value='01/01/15')
+        span.bv.bbc
 
-      .bqr(v-if="date")
-        .bpy.bqt
-          input.form-control(type='text' value='01/01/15')
-          span.bv.bbc
-
-        .ol.bqt.bqv
-          span.bqs.bsl
-          button.ce.nr(type='button') Dia
-          button.ce.nr.active(type='button') Mês
-          button.ce.nr(type='button') Ano
+      .ol.bqt.bqv
+        span.bqs.bsl
+        button.ce.nr(type='button') Dia
+        button.ce.nr.active(type='button') Mês
+        button.ce.nr(type='button') Ano
 
 </template>
 

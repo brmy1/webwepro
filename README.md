@@ -6,7 +6,7 @@ Instale o nodejs e seja feliz.
 ## Build Setup
 
 ```bash
-# Antes de tudo instale as dependencias e depois npm run dev.
+# Antes de tudo, libere o ps1 do power shell, apos instala o NodeJS, npm i e npm run dev. Para vizualizar localhost:3000
 $ npm install
 
 # serve with hot reload at localhost:3000
