@@ -1,0 +1,21 @@
+/*  fade  */
+.fade-enter-active, .fade-leave-active 
+  transition: opacity .1s ease
+
+
+.fade-enter, .fade-leave-to
+  opacity: 0
+
+
+/* fade-horizontal */
+.fade-horizontal-enter-active
+    transition: all 0.2s ease
+
+
+.fade-horizontal-leave-active
+    transition: all 0.2s cubic-bezier(1, 0.5, 0.8, 1)
+
+
+.fade-horizontal-enter, .fade-horizontal-leave-to
+    transform: translateX(10px)
+    opacity: 0

@@ -13,7 +13,7 @@ nav
                         span.bv.bhw
 
                 ul.nav.pb.nav-stacked.wz
-                    li.axq $nome_do_estabelecimento
+                    li.axq {{ ii }}
                     li.pa
                         n-link.oy(to="/" :class="$route.path === '/'? 'active' :''") Resumo
                     li.pa
@@ -52,3 +52,28 @@ nav
                 hr.bre.aez
 
 </template>
+
+<script>
+import { ii } from './default.js'
+
+export default {
+  name: 'ComponentNavDefault',
+  setup () {
+    return { ii }
+  },
+  data: () => ({
+    MenuOptions: [
+      'financeiro',
+      'caixa',
+      'clientes',
+      'produtos',
+      'cobranças',
+      'agenda',
+      'fornecedores',
+      'equipe',
+      'relatorios',
+      'API'
+    ]
+  })
+}
+</script>

@@ -4,7 +4,8 @@
       b-row
         b-col(cols="6")
           header-default.mb-5(title="Usuários" description="WebwePRO")
-        b-col(cols="6")
+
+        b-col.allign-end(cols="6")
           p Adicionar usuário
 
       b-row
@@ -51,13 +52,8 @@ export default {
     ]
   }),
   methods: {
-    GoPage (i) {
-      this.$router.push(i)
-    },
-
-    AddAccount () {
-      return false
-    }
+    GoPage (i) { this.$router.push(i) },
+    AddAccount () { return false }
   }
 }
 </script>

@@ -2,6 +2,13 @@ export default {
   ssr: false,
   target: 'static',
   layout: 'default',
+  pageTransition: 'fade-horizontal',
+  loading: { color: '#000' },
+  loadingIndicator: {
+    name: 'rotating-plane',
+    color: 'white',
+    background: '#252830'
+  },
   head: {
     title: 'matheusesturiao',
     meta: [
@@ -16,7 +23,8 @@ export default {
   },
   css: [
     '@/assets/css/toolkit-inverse.css',
-    '@/assets/css/application.css'
+    '@/assets/css/application.css',
+    '@/assets/sass/transitions.sass'
   ],
   plugins: [
     '@/plugins/firebase'
