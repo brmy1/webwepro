@@ -2,8 +2,8 @@
 b-form
   b-row
     b-col
-      h4 Adicionar usuario
-      small Informação básica do usuário
+      h4 Informações sobre o usuario
+      small Informação básicas do usuário
 
     b-col
       //- thumbnails-default
@@ -24,7 +24,7 @@ b-form
 
   b-row.mt-5
     b-col
-      h4 Informações de endereço e contato
+      h4 Informações de endereço e contato do usuario
       small Informações de endereço e contato do usuário.
 
   b-row.mt-3

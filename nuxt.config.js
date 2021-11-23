@@ -1,6 +1,7 @@
 export default {
   ssr: false,
   target: 'static',
+  layout: 'default',
   head: {
     title: 'matheusesturiao',
     meta: [

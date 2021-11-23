@@ -4,7 +4,7 @@ nav
     .bqn
       .bqo
         h6.bqq.text-secondary {{ description }}
-        h3.bqp {{ title }}
+        h2.bqp {{ title }}
 
       .bqr(v-if="date")
 

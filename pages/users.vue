@@ -3,6 +3,10 @@
     b-container
       b-row
         b-col
+          header-default.mb-5(title="Usuários" description="WebwePRO")
+          nuxt
+
+        //- b-col
           header-default.mb-3(title="Usuários" description="WebwePRO")
           //-
             hr.bre.aez
@@ -25,10 +29,7 @@
           b-row
             b-col(sm="hidden")
               hr.bre.aez
-              small WebwePRO. Todos os direitos reservados. §2021.
-
-        b-col(sm="12" md="8")
-          nuxt
+              small WebwePRO. Todos os direitos reservados.
 
 </template>
 
@@ -38,12 +39,27 @@ export default {
   data: () => ({
     menuOptions: [
       {
-        name: 'Todos usuários',
+        name: 'Todos',
         desc: 'Visualize a lista completa de usuários.',
         link: '/users'
       },
       {
-        name: 'Novo usuário',
+        name: 'Clientes',
+        desc: 'Lista completa de clientes.',
+        link: '/users/new'
+      },
+      {
+        name: 'Fornecedores',
+        desc: 'Lista de fornecedores.',
+        link: '/users/new'
+      },
+      {
+        name: 'Equipe',
+        desc: 'Lista completa da sua equipe.',
+        link: '/users/new'
+      },
+      {
+        name: 'Cadastrar',
         desc: 'Adicionar um usuário.',
         link: '/users/new'
       },
