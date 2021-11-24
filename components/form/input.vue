@@ -1,8 +1,6 @@
 <template lang="pug">
-  b-row
-    b-col
-      b-form-group#fieldset-zip(description='Endereço CEP.' label='CEP' label-for='input-zip' valid-feedback='Thank you!' :invalid-feedback='invalidFeedback' :state='state')
-        b-form-input#input-zip(v-model='name' :state='state' trim)
+  b-form-group#fieldset-default(:description='description' :label='label' :placeholder="placeholder" label-for='input-default' valid-feedback='Thank you!' :invalid-feedback='invalidFeedback' :state='state')
+    b-form-input#input-default(v-model='name' :state='state' trim)
 
     //- b-col
         template(v-if="type !== 'file'")
@@ -43,6 +41,11 @@ export default Vue.extend({
       type: String,
       required: false,
       default: 'text'
+    },
+    description: {
+      type: String,
+      required: false,
+      default: 'off'
     },
     autocomplete: {
       type: String,

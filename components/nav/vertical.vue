@@ -1,11 +1,11 @@
 <template lang="pug">
-nav.ch
-    b-col
+nav.ch.fixed-bottom
+    //- b-col()
         n-link.bqi(to="/")
             span.bv.bhc.bqj
 
     b-col(cols="12")
-        .bqm
+        .bqm.bg-dark.text-white
             ul.nav.pb.bqk.zh
                 li.pa(v-for="(obj, title, index) in MenuOptions" :key="i")
                     n-link.oy(:to="obj.link" :title="title" :class="`${$route.path !== obj.link || 'active'}`")

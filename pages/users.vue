@@ -1,12 +1,12 @@
 <template lang="pug">
   section
     b-container
-      b-row
-        b-col(cols="6")
+      b-row(align-h="between")
+        b-col(cols="9")
           header-default.mb-5(title="Usuários" description="WebwePRO")
 
-        b-col.allign-end(cols="6")
-          p Adicionar usuário
+        b-col
+          bottom-default
 
       b-row
         b-col
