@@ -1,12 +1,13 @@
 <template lang="pug">
 b-form
-  b-row
+  b-row(align-h="between")
     b-col
-      h4 Informações sobre o usuario
+      h4 Adicionar um novo usuário
       small Informação básicas do usuário
 
-    b-col
-      //- thumbnails-default
+    b-col(cols="auto")
+      small Imagem de perfil.
+      br
       input(type="file" @change="event => upladProfileImage(event)")
 
   b-row.mt-3
@@ -46,11 +47,11 @@ b-form
 
   b-row.mt-4
     b-col(sm="12" md="4" )
-      b-form-group#fieldset-zip(description='Número de contato Whatsapp.' label='Whatsapp' label-for='input-zip')
+      b-form-group#fieldset-zip(description='Número de contato Whatsapp, ou número principal.' label='Whatsapp' label-for='input-zip')
         b-form-input#input-zip(v-model='form.default' trim)
 
     b-col(sm="12" md="8" )
-      b-form-group#fieldset-street(description='Número fixo.' label='Número de residencia ou loja.' label-for='input-street')
+      b-form-group#fieldset-street(description='Número fixo, ou secundario.' label='Número de contato, residencia ou loja.' label-for='input-street')
         b-form-input#input-street(v-model='form.default' trim)
 
   b-row

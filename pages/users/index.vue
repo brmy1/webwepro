@@ -28,6 +28,9 @@ div
               b-dropdown-item Action
               b-dropdown-item Another action
               b-dropdown-item Something else here...
+  b-row
+    b-col
+      p exibir mais
 </template>
 
 <script>

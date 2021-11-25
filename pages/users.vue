@@ -2,11 +2,15 @@
   section
     b-container
       b-row(align-h="between")
-        b-col(cols="9")
+        b-col(cols="6")
           header-default.mb-5(title="Usuários" description="WebwePRO")
 
-        b-col
-          bottom-default
+        b-col(cols="auto" v-if="$route.path === '/users'")
+          n-link(to="/users/new")
+            bottom-default(title="Adicionar um usuário" icon="ayx" )
+        b-col(cols="auto" v-else-if="$route.path === '/users/new'")
+          n-link(to="/users")
+            bottom-default(title="Cancelar" icon="bbi" color="danger")
 
       b-row
         b-col
@@ -53,7 +57,7 @@ export default {
   }),
   methods: {
     GoPage (i) { this.$router.push(i) },
-    AddAccount () { return false }
+    AddAccount () { alert('add account') }
   }
 }
 </script>
