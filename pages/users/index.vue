@@ -4,7 +4,7 @@ div
       b-col(sm="12" md="6")
         br
         h5 Todos usuários
-        small Lista completa de todos usuários. 1.521
+        small Lista completa de usuários. 1.521
 
       b-col
         form-input(label="Pesquisar" description="Pesquisar todos usuarios." placeholder="Pesquisar")
@@ -28,9 +28,10 @@ div
               b-dropdown-item Action
               b-dropdown-item Another action
               b-dropdown-item Something else here...
-  b-row
-    b-col
-      p exibir mais
+  b-row(align-h="center")
+    b-col(cols="auto")
+      bottom-default.mt-5.mb-5(title="Exibir mais")
+
 </template>
 
 <script>

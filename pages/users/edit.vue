@@ -2,7 +2,7 @@
 b-form
   b-row(align-h="between")
     b-col
-      h4 Adicionar um novo usuário
+      h4 Editar usuário
       small Informação básicas do usuário
 
     b-col(cols="auto")
@@ -56,7 +56,7 @@ b-form
 
   b-row(align-h="end")
     b-col(cols="auto")
-      bottom-default.mt-5(title="Adicionar usuário")
+      bottom-default.mt-5(title="Salvar usuário")
 
 </template>
 
@@ -64,7 +64,7 @@ b-form
 // import Upload from '@/api/Upload'
 
 export default {
-  name: 'NewUserPage',
+  name: 'EditUserPage',
   data: () => ({
     form: {
       default: ''
