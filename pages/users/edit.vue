@@ -21,7 +21,7 @@ b-form
 
     b-col
       b-form-group#fieldset-email(description='Email de acesso do usuário.' label='Email' label-for='input-email')
-        b-form-input#input-email(v-model='form.default' trim)
+        b-form-input#input-email(v-model='form.default' trim disable)
 
   b-row.mt-5
     b-col

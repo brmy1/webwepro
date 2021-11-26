@@ -3,6 +3,14 @@
 Fiquem a vontade para estudar meu código. Arquivos de db não serão disponibilizados.
 Instale o nodejs e seja feliz.
 
+## Para estudo.
+Códigos como hecma next, html pug e sass. Javascript avançado. Servidor Firebase ON.
+
+Para estudar HTML & PUG "./pages"
+Para estudar Javascript "./store"
+Para estudar Javascript "./api"
+Para estudar Sass "./assets/sass"
+
 ## UIX Documentação- Bootstrap
 https://bootstrap-themes.github.io/dashboard/index.html
 

@@ -3,21 +3,22 @@ div
   b-row
       b-col(sm="12" md="6")
         br
-        h5 Todos usuários
+        h5 Todos usuários - {{ $store.state.users.list }}
         small Lista completa de usuários. 1.521
 
       b-col
-        form-input(label="Pesquisar" description="Pesquisar todos usuarios." placeholder="Pesquisar")
+        //- form-input(label="Pesquisar" description="Pesquisar todos usuarios." placeholder="Pesquisar")
 
   b-row.mt-4
     b-col
-      card-default(v-for="i in 8" :key="i")
+      card-default(v-for="i in 2" :key="i")
         .row.align-items-center
-          b-col(sm="2" md="1")
+          b-col(cols="3" md="2")
             thumbnails-default(:size="60")
           b-col
-            h6.bold Fulano da silva
-            small fulano2@gmail.com
+            .ml-4
+              h6.bold Fulano da silva
+              small fulano2@gmail.com
           //- b-col
             h6 Administrador
             small Permissão
@@ -28,6 +29,7 @@ div
               b-dropdown-item Action
               b-dropdown-item Another action
               b-dropdown-item Something else here...
+
   b-row(align-h="center")
     b-col(cols="auto")
       bottom-default.mt-5.mb-5(title="Exibir mais")
@@ -35,7 +37,17 @@ div
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
+
 export default {
-  name: 'IndexPageUsers'
+  name: 'IndexPageUsers',
+  mounted () {
+    setTimeout(() => { this.getListUsers() }, 500)
+  },
+  methods: {
+    ...mapMutations({
+      getListUsers: 'users/getList'
+    })
+  }
 }
 </script>

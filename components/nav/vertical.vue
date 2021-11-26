@@ -5,17 +5,15 @@ nav.ch.fixed-bottom
             span.bv.bhc.bqj
 
     b-col(cols="12")
-        .bqm.bg-dark.text-white
-            ul.nav.pb.bqk.zh
-                li.pa(v-for="(obj, title, index) in MenuOptions" :key="i")
-                    n-link.oy(:to="obj.link" :title="title" :class="`${$route.path !== obj.link || 'active'}`")
-                        span.bv(:class="obj.icon")
+      .bqm.bg-dark.text-white
+          ul.nav.pb.bqk.zh
+              li.pa(v-for="(obj, title, index) in MenuOptions" :key="title")
+                  n-link.oy(:to="obj.link" :title="title" :class="`${$route.path !== obj.link || 'active'}`")
+                      span.bv(:class="obj.icon")
 
 </template>
 
 <script>
-import { ii } from './default.js'
-
 export default {
   name: 'ComponentNavVertial',
   data: () => ({
@@ -53,9 +51,15 @@ export default {
         icon: 'bmo'
       }
     }
-  }),
-  computed: {
-    iu: () => ii()
-  }
+  })
 }
 </script>
+
+<style lang="sass" scoped>
+.menu-mobile
+  display: flex
+  position: fixed
+  bottom: 0px
+  width: 100%
+  height: 50px
+</style>

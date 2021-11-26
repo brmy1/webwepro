@@ -7,8 +7,11 @@
 
         b-col(cols="auto" v-if="$route.path === '/users'")
           n-link(to="/users/new")
-            bottom-default(title="Adicionar um usuário" icon="ayx" )
+            bottom-default(title="Adicionar usuário" icon="ayx" )
         b-col(cols="auto" v-else-if="$route.path === '/users/new'")
+          n-link(to="/users")
+            bottom-default(title="Cancelar" icon="bbi" color="danger")
+        b-col(cols="auto" v-else-if="$route.path === '/users/edit'")
           n-link(to="/users")
             bottom-default(title="Cancelar" icon="bbi" color="danger")
 
