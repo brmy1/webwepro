@@ -1,7 +1,6 @@
 # webwepro
 
-Fiquem a vontade para estudar meu código. Arquivos de db não serão disponibilizados.
-Instale o nodejs e seja feliz.
+Fiquem a vontade para estudar meu código. Instale o nodejs e seja feliz.
 
 ## Para estudo.
 Códigos como hecma next, html pug e sass. Javascript avançado. Servidor Firebase ON.
