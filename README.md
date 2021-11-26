@@ -6,10 +6,12 @@ Instale o nodejs e seja feliz.
 ## Para estudo.
 Códigos como hecma next, html pug e sass. Javascript avançado. Servidor Firebase ON.
 
-Para estudar HTML & PUG "./pages"
-Para estudar Javascript "./store"
-Para estudar Javascript "./api"
-Para estudar Sass "./assets/sass"
+Bootstrap. vue-bootstrap
+
+Para estudo HTML & PUG "./pages"
+Para estudo Javascript "./store"
+Para estudo Javascript "./api"
+Para estudo Sass "./assets/sass"
 
 ## UIX Documentação- Bootstrap
 https://bootstrap-themes.github.io/dashboard/index.html
