@@ -1,11 +1,14 @@
 # webwepro
 
 Fiquem a vontade para estudar meu código. Instale o nodejs e seja feliz.
+Atualização diaria.
 
 ## Para estudo.
 Códigos como hecma next, html pug e sass. Javascript avançado. Servidor Firebase ON.
 
-Bootstrap. vue-bootstrap
+NuxtJS.
+
+Bootstrap. vue-bootstrap. firebase.
 
 Para estudo HTML & PUG "./pages"
 Para estudo Javascript "./store"

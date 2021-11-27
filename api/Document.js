@@ -4,12 +4,13 @@
 
 import {
   doc,
-  collection,
-  addDoc,
-  getDoc,
   getFirestore,
-  query,
-  getDocs
+  collection,
+  getDocs,
+  getDoc,
+  addDoc,
+  deleteDoc,
+  query
 } from 'firebase/firestore'
 
 class Document {
@@ -39,7 +40,11 @@ class Document {
 
     const querySnapshot = await getDocs(q)
     querySnapshot.forEach((doc) => {
-      list.push(doc.data())
+      list.push({
+        doc: doc.data(),
+        uid: doc.id,
+        path: collectionName
+      })
     })
 
     return list
@@ -48,17 +53,28 @@ class Document {
   // Adicionar documento a uma coleção
   async add (form, collectionName, msg) {
     const db = getFirestore()
-
     try {
-      const docRef = await addDoc(collection(db, collectionName), form)
-      return docRef.data()
+      await addDoc(collection(db, collectionName), form)
+      return msg.success
     } catch (e) {
-      return e
+      return msg.error
     }
   }
 
   // Editar um documento já existente
-  edit (form, uid, collection) {}
+  async edit (form, uid, collection) {}
+
+  // Remover um documento existente
+  async remove (uid, collectionName, msg) {
+    const db = getFirestore()
+
+    try {
+      await deleteDoc(doc(db, collectionName, uid))
+      return msg.success
+    } catch (e) {
+      return msg.error
+    }
+  }
 }
 
 export default new Document()

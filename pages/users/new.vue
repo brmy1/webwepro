@@ -89,7 +89,7 @@ b-form
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
+import { mapActions } from 'vuex'
 
 export default {
   name: 'NewUserPage',
@@ -102,7 +102,7 @@ export default {
       address: {
         city: 'Rio de Janeiro',
         street: 'Brigadeiro',
-        zip: '28900100',
+        zip: '21900100',
         number: '255',
         complement: 'Casa'
       },
@@ -118,11 +118,10 @@ export default {
   }),
   methods: {
     addUser () {
-      this.addNewUser(this.form)
+      // eslint-disable-next-line no-console
+      this.add(this.form).then(i => console.log(i)).catch(e => console.log(e))
     },
-    ...mapMutations({
-      addNewUser: 'Users/add'
-    })
+    ...mapActions('modules/users', ['add'])
   }
 }
 </script>
