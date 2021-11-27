@@ -11,14 +11,14 @@ div
 
   b-row.mt-4
     b-col
-      card-default(v-for="user in list" :key="user.uid")
+      card-default(v-for="item in list" :key="item.uid")
         .row.align-items-center
           b-col(cols="3" md="2")
             thumbnails-default(:size="60")
           b-col
             .ml-4
-              h6.bold {{ user.name }}
-              small {{ user.email }}
+              h6.bold {{ item.name }}
+              small {{ item.email }}
           //- b-col
             h6 Administrador
             small Permissão
@@ -26,7 +26,7 @@ div
             b-dropdown(size='md' variant='none' toggle-class='text-decoration-none' no-caret)
               template(#button-content)
                 span.bv.bds.text-white
-              b-dropdown-item(@click="remove(user.uid)") Remover
+              b-dropdown-item(@click="removeDocument(item.uid)") Remover
 
   b-row(align-h="center")
     b-col(cols="auto")
@@ -46,7 +46,13 @@ export default {
     this.getList()
   },
   methods: {
-    ...mapActions('modules/users', ['getList', 'remove'])
+    removeDocument (uid) {
+      this.remove(uid)
+        .then(() => { this.success('Usuário removido com sucesso.') })
+        .catch(() => { this.error('Erro ao remover usuário.') })
+    },
+    ...mapActions('modules/users', ['getList', 'remove']),
+    ...mapActions('modules/notification', ['success', 'error'])
   }
 }
 </script>

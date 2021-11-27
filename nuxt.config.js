@@ -27,7 +27,9 @@ export default {
     '@/assets/sass/transitions.sass'
   ],
   plugins: [
-    '@/plugins/firebase'
+    '@/plugins/firebase',
+    '@/plugins/aosvue',
+    '@/plugins/notification'
   ],
   components: true,
   buildModules: [
@@ -37,6 +39,7 @@ export default {
     'bootstrap-vue/nuxt',
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    '@nuxtjs/toast',
     'nuxt-uid-module'
   ],
   axios: {},
@@ -44,6 +47,9 @@ export default {
     manifest: {
       lang: 'en'
     }
+  },
+  toast: {
+    position: 'bottom-right'
   },
   build: {}
 }

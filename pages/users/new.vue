@@ -118,10 +118,16 @@ export default {
   }),
   methods: {
     addUser () {
-      // eslint-disable-next-line no-console
-      this.add(this.form).then(i => console.log(i)).catch(e => console.log(e))
+      this.add(this.form).then(() => {
+        this.success('Usuário adicionado com sucesso.')
+      }).catch(() => {
+        this.error('Erro ao adicionar usuario, tente novamente.')
+      }).finally(() => {
+        this.$router.push({ path: '/users' })
+      })
     },
-    ...mapActions('modules/users', ['add'])
+    ...mapActions('modules/users', ['add']),
+    ...mapActions('modules/notification', ['success', 'error'])
   }
 }
 </script>

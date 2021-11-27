@@ -10,7 +10,7 @@
             bottom-default(title="Adicionar usuário" icon="ayx" )
         b-col(cols="auto" v-else-if="$route.path === '/users/new'")
           n-link(to="/users")
-            bottom-default(title="Cancelar" icon="bbi" color="danger")
+            bottom-default(title="Voltar para usuários" icon="bbi" color="danger")
         b-col(cols="auto" v-else-if="$route.path === '/users/edit'")
           n-link(to="/users")
             bottom-default(title="Cancelar" icon="bbi" color="danger")
@@ -57,11 +57,7 @@ export default {
         link: '/users/permissions'
       }
     ]
-  }),
-  methods: {
-    GoPage (i) { this.$router.push(i) },
-    AddAccount () { alert('add account') }
-  }
+  })
 }
 </script>
 
