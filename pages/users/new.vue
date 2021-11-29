@@ -93,37 +93,48 @@ import { mapActions } from 'vuex'
 
 export default {
   name: 'NewUserPage',
-  data: () => ({
-    form: {
-      name: 'Fulano',
-      lastname: 'Silva',
-      birth: '09/02/1997',
-      email: 'fulanosilva@gmail.com',
-      address: {
-        city: 'Rio de Janeiro',
-        street: 'Brigadeiro',
-        zip: '21900100',
-        number: '255',
-        complement: 'Casa'
-      },
-      document: {
-        cpf: '123.456.789-10',
-        rg: '123456789'
-      },
-      contact: {
-        tel1: '+55 22 9 12345678',
-        tel2: '+55 22 12345678'
+  data: () => ({}),
+  computed: {
+    formDefault () {
+      return {
+        name: '',
+        lastname: '',
+        birth: '',
+        email: '',
+        address: {
+          city: '',
+          street: '',
+          zip: '',
+          number: '',
+          complement: ''
+        },
+        document: {
+          cpf: '',
+          rg: ''
+        },
+        contact: {
+          tel1: '',
+          tel2: ''
+        }
       }
-    }
-  }),
+    },
+
+    form () { return { ...this.formDefault } }
+  },
   methods: {
     addUser () {
       this.add(this.form).then(() => {
-        this.success('Usuário adicionado com sucesso.')
+        this.success('Usuário adicionado com sucesso.', {
+          text: 'Visualizar',
+          onClick: () => { this.$router.push({ path: 'users/uid_user_key_here' }) }
+        })
       }).catch(() => {
-        this.error('Erro ao adicionar usuario, tente novamente.')
+        this.error('Erro ao adicionar usuario.', {
+          text: 'Tentar novamente',
+          onClick: () => { this.addUser() }
+        })
       }).finally(() => {
-        this.$router.push({ path: '/users' })
+        this.$router.go(-1)
       })
     },
     ...mapActions('modules/users', ['add']),

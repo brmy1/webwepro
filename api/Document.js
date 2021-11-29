@@ -25,9 +25,13 @@ class Document {
     const docSnap = await getDoc(docRef)
 
     if (docSnap.exists()) {
-      console.log('Document data:', docSnap.data())
+      return ({
+        doc: docSnap.data(),
+        uid: docSnap.id,
+        path: collectionName
+      })
     } else {
-      console.log('No such document!')
+      return msg.error
     }
   }
 

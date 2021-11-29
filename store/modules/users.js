@@ -14,6 +14,10 @@ const state = () => ({
 // Funções de tratamento de entrega de dados. unico que obtem informações tratadas_
 // do state afim de proteger os dados.
 const getters = {
+  viewUser (state) {
+    return state.viewDoc
+  },
+
   list (state) {
     const doc = state.listUsers
     const list = []
@@ -59,6 +63,14 @@ const actions = {
     commit('setLoading', false)
   },
 
+  async getUser ({ commit }, uid) {
+    commit('setLoading', 'getUser')
+    const job = await Document.viewOne(uid, 'users')
+    commit('setViewDoc', job)
+    commit('setLoading', false)
+    return job
+  },
+
   async add ({ commit }, form) {
     commit('setLoading', 'addUser')
     const job = await Document.add(form, 'users', {
@@ -99,6 +111,10 @@ const mutations = {
 
   setLoading (state, i) {
     state.loading = i
+  },
+
+  setViewDoc (state, i) {
+    state.viewDoc = i
   }
 }
 
