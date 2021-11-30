@@ -5,11 +5,15 @@ nav.ch.fixed-bottom
             span.bv.bhc.bqj
 
     b-col(cols="12")
-      .bqm.bg-dark.text-white
-          ul.nav.pb.bqk.zh
-              li.pa(v-for="(obj, title, index) in MenuOptions" :key="title")
-                  n-link.oy(:to="obj.link" :title="title" :class="`${$route.path !== obj.link || 'active'}`")
-                      span.bv(:class="obj.icon")
+      .bqm.text-white
+        ul.nav.pb.bqk.zh
+          li.pa.mb-4.mt-2
+            span.oy
+              span.bv.bbc
+
+          li.pa(v-for="(obj, title, index) in MenuOptions" :key="title")
+            n-link.oy(:to="obj.link" :title="title" :class="`${$route.path !== obj.link || 'active'}`")
+              span.bv(:class="obj.icon")
 
 </template>
 

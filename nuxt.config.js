@@ -24,6 +24,7 @@ export default {
   css: [
     '@/assets/css/toolkit-inverse.css',
     '@/assets/css/application.css',
+    '@/assets/css/uicons-regular-rounded.css',
     '@/assets/sass/transitions.sass'
   ],
   plugins: [

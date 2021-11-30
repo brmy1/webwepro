@@ -15,6 +15,9 @@ Para estudo Javascript "./store"
 Para estudo Javascript "./api"
 Para estudo Sass "./assets/sass"
 
+## Icones do app
+https://www.flaticon.com/br/uicons/get-started
+
 ## UIX Documentação- Bootstrap
 https://bootstrap-themes.github.io/dashboard/index.html
 

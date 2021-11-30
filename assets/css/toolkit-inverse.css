@@ -61,7 +61,7 @@
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
-  --primary: #1997c6;
+  --primary: #0d6efd;
   --secondary: #6c757d;
   --success: #1BC98E;
   --info: #9F86FF;
@@ -180,7 +180,7 @@ sup {
   top: -.5em; }
 
 a {
-  color: #1997c6;
+  color: #0d6efd;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
@@ -2027,23 +2027,23 @@ fieldset:disabled a.ce {
 
 .ni {
   color: #fff;
-  background-color: #1997c6;
-  border-color: #1997c6; }
+  background-color: #0d6efd;
+  border-color: #0d6efd; }
   .ni:hover {
     color: #fff;
-    background-color: #157da4;
+    background-color: #076afc;
     border-color: #137499; }
   .ni:focus, .ni.nh {
     box-shadow: 0 0 0 0.2rem rgba(25, 151, 198, 0.5); }
   .ni.disabled, .ni:disabled {
     color: #fff;
-    background-color: #1997c6;
-    border-color: #1997c6; }
+    background-color: #0d6efd;
+    border-color: #0d6efd; }
   .ni:not(:disabled):not(.disabled):active, .ni:not(:disabled):not(.disabled).active,
   .show > .ni.nj {
     color: #fff;
     background-color: #137499;
-    border-color: #126c8d; }
+    border-color: #076afc; }
     .ni:not(:disabled):not(.disabled):active:focus, .ni:not(:disabled):not(.disabled).active:focus,
     .show > .ni.nj:focus {
       box-shadow: 0 0 0 0.2rem rgba(25, 151, 198, 0.5); }
@@ -2210,24 +2210,24 @@ fieldset:disabled a.ce {
       box-shadow: 0 0 0 0.2rem rgba(26, 28, 34, 0.5); }
 
 .nr {
-  color: #1997c6;
+  color: #0d6efd;
   background-color: transparent;
   background-image: none;
-  border-color: #1997c6; }
+  border-color: #0d6efd; }
   .nr:hover {
     color: #fff;
-    background-color: #1997c6;
-    border-color: #1997c6; }
+    background-color: #0d6efd;
+    border-color: #0d6efd; }
   .nr:focus, .nr.nh {
     box-shadow: 0 0 0 0.2rem rgba(25, 151, 198, 0.5); }
   .nr.disabled, .nr:disabled {
-    color: #1997c6;
+    color: #0d6efd;
     background-color: transparent; }
   .nr:not(:disabled):not(.disabled):active, .nr:not(:disabled):not(.disabled).active,
   .show > .nr.nj {
     color: #fff;
-    background-color: #1997c6;
-    border-color: #1997c6; }
+    background-color: #0d6efd;
+    border-color: #0d6efd; }
     .nr:not(:disabled):not(.disabled):active:focus, .nr:not(:disabled):not(.disabled).active:focus,
     .show > .nr.nj:focus {
       box-shadow: 0 0 0 0.2rem rgba(25, 151, 198, 0.5); }
@@ -2395,7 +2395,7 @@ fieldset:disabled a.ce {
 
 .nz {
   font-weight: 400;
-  color: #1997c6;
+  color: #0d6efd;
   background-color: transparent; }
   .nz:hover {
     color: #106382;
@@ -2591,7 +2591,7 @@ tbody.collapse.show {
   .oi.active, .oi:active {
     color: #fff;
     text-decoration: none;
-    background-color: #1997c6; }
+    background-color: #0d6efd; }
   .oi.disabled, .oi:disabled {
     color: #6c757d;
     background-color: transparent; }
@@ -2863,7 +2863,7 @@ tbody.collapse.show {
   opacity: 0; }
   .my:checked ~ .mz::before {
     color: #fff;
-    background-color: #1997c6; }
+    background-color: #0d6efd; }
   .my:focus ~ .mz::before {
     box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(25, 151, 198, 0.25); }
   .my:active ~ .mz::before {
@@ -2906,13 +2906,13 @@ tbody.collapse.show {
   border-radius: 0.25rem; }
 
 .os .my:checked ~ .mz::before {
-  background-color: #1997c6; }
+  background-color: #0d6efd; }
 
 .os .my:checked ~ .mz::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.ot.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E"); }
 
 .os .my:indeterminate ~ .mz::before {
-  background-color: #1997c6; }
+  background-color: #0d6efd; }
 
 .os .my:indeterminate ~ .mz::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.ot.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='%23fff' d='M0 2h4'/%3E%3C/svg%3E"); }
@@ -2927,7 +2927,7 @@ tbody.collapse.show {
   border-radius: 50%; }
 
 .ou .my:checked ~ .mz::before {
-  background-color: #1997c6; }
+  background-color: #0d6efd; }
 
 .ou .my:checked ~ .mz::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.ot.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%23fff'/%3E%3C/svg%3E"); }
@@ -3078,7 +3078,7 @@ tbody.collapse.show {
 .pb .oy.active,
 .pb .show > .oy {
   color: #fff;
-  background-color: #1997c6; }
+  background-color: #0d6efd; }
 
 .pc .pa {
   -webkit-box-flex: 1;
@@ -3735,7 +3735,7 @@ tbody.collapse.show {
   z-index: 1;
   color: #fff;
   background-color: #51586a;
-  border-color: #1997c6; }
+  border-color: #0d6efd; }
 
 .qp.disabled .qo {
   color: #51586a;
@@ -3794,7 +3794,7 @@ tbody.collapse.show {
 
 .qt {
   color: #fff;
-  background-color: #1997c6; }
+  background-color: #0d6efd; }
   .qt[href]:hover, .qt[href]:focus {
     color: #fff;
     text-decoration: none;
@@ -3999,7 +3999,7 @@ tbody.collapse.show {
           justify-content: center;
   color: #fff;
   text-align: center;
-  background-color: #1997c6;
+  background-color: #0d6efd;
   -webkit-transition: width 0.6s ease;
   transition: width 0.6s ease; }
 
@@ -4072,7 +4072,7 @@ tbody.collapse.show {
     z-index: 2;
     color: #fff;
     background-color: #51586a;
-    border-color: #1997c6; }
+    border-color: #0d6efd; }
 
 .rt .pu {
   border-right: 0;
@@ -4760,7 +4760,7 @@ button.close {
   vertical-align: text-top !important; }
 
 .tg {
-  background-color: #1997c6 !important; }
+  background-color: #0d6efd !important; }
 
 a.tg:hover, a.tg:focus,
 button.tg:hover,
@@ -4860,7 +4860,7 @@ button.tn:focus {
   border-left: 0 !important; }
 
 .ua {
-  border-color: #1997c6 !important; }
+  border-color: #0d6efd !important; }
 
 .ub {
   border-color: #6c757d !important; }
@@ -6890,7 +6890,7 @@ button.tn:focus {
   color: #fff !important; }
 
 .awq {
-  color: #1997c6 !important; }
+  color: #0d6efd !important; }
 
 a.awq:hover, a.awq:focus {
   color: #137499 !important; }
@@ -7096,12 +7096,12 @@ textarea {
     color: #fff;
     border-bottom: 4px solid transparent; }
     .axr > .pa > .oy:hover, .axr > .pa > .oy:focus {
-      color: #1997c6;
+      color: #0d6efd;
       background-color: transparent; }
     .axr > .pa > .oy.active, .axr > .pa > .oy.active:hover, .axr > .pa > .oy.active:focus {
       font-weight: 500;
-      color: #1997c6;
-      border-bottom-color: #1997c6; }
+      color: #0d6efd;
+      border-bottom-color: #0d6efd; }
   .axr > .pa + .pa {
     margin-left: 30px; }
 
@@ -7126,7 +7126,7 @@ textarea {
     border-left: 4px solid;
     text-decoration: none; }
   .axr.nav-stacked > .pa > .oy.active, .axr.nav-stacked > .pa > .oy.active:hover, .axr.nav-stacked > .pa > .oy.active:focus {
-    border-left-color: #1997c6; }
+    border-left-color: #0d6efd; }
 
 .axr.nav-stacked .axq {
   padding-left: 34px; }
@@ -8855,19 +8855,19 @@ textarea {
         box-shadow: 0 0 0 0.2rem rgba(207, 210, 218, 0.5); }
   .datepicker table tr td.active, .datepicker table tr td.active:hover, .datepicker table tr td.active.disabled, .datepicker table tr td.active.disabled:hover {
     color: #fff;
-    background-color: #1997c6;
-    border-color: #1997c6;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); }
     .datepicker table tr td.active:hover, .datepicker table tr td.active:hover:hover, .datepicker table tr td.active.disabled:hover, .datepicker table tr td.active.disabled:hover:hover {
       color: #fff;
-      background-color: #157da4;
+      background-color: #076afc;
       border-color: #137499; }
     .datepicker table tr td.active:focus, .datepicker table tr td.active.nh, .datepicker table tr td.active:hover:focus, .datepicker table tr td.active:hover.nh, .datepicker table tr td.active.disabled:focus, .datepicker table tr td.active.disabled.nh, .datepicker table tr td.active.disabled:hover:focus, .datepicker table tr td.active.disabled:hover.nh {
       box-shadow: 0 0 0 0.2rem rgba(25, 151, 198, 0.5); }
     .datepicker table tr td.active.disabled, .datepicker table tr td.active:disabled, .datepicker table tr td.active:hover.disabled, .datepicker table tr td.active:hover:disabled, .datepicker table tr td.active.disabled.disabled, .datepicker table tr td.active.disabled:disabled, .datepicker table tr td.active.disabled:hover.disabled, .datepicker table tr td.active.disabled:hover:disabled {
       color: #fff;
-      background-color: #1997c6;
-      border-color: #1997c6; }
+      background-color: #0d6efd;
+      border-color: #0d6efd; }
     .datepicker table tr td.active:not(:disabled):not(.disabled):active, .datepicker table tr td.active:not(:disabled):not(.disabled).active,
     .show > .datepicker table tr td.active.nj, .datepicker table tr td.active:hover:not(:disabled):not(.disabled):active, .datepicker table tr td.active:hover:not(:disabled):not(.disabled).active,
     .show > .datepicker table tr td.active:hover.nj, .datepicker table tr td.active.disabled:not(:disabled):not(.disabled):active, .datepicker table tr td.active.disabled:not(:disabled):not(.disabled).active,
@@ -8875,7 +8875,7 @@ textarea {
     .show > .datepicker table tr td.active.disabled:hover.nj {
       color: #fff;
       background-color: #137499;
-      border-color: #126c8d; }
+      border-color: #076afc; }
       .datepicker table tr td.active:not(:disabled):not(.disabled):active:focus, .datepicker table tr td.active:not(:disabled):not(.disabled).active:focus,
       .show > .datepicker table tr td.active.nj:focus, .datepicker table tr td.active:hover:not(:disabled):not(.disabled):active:focus, .datepicker table tr td.active:hover:not(:disabled):not(.disabled).active:focus,
       .show > .datepicker table tr td.active:hover.nj:focus, .datepicker table tr td.active.disabled:not(:disabled):not(.disabled):active:focus, .datepicker table tr td.active.disabled:not(:disabled):not(.disabled).active:focus,
@@ -8899,19 +8899,19 @@ textarea {
       cursor: default; }
     .datepicker table tr td span.active, .datepicker table tr td span.active:hover, .datepicker table tr td span.active.disabled, .datepicker table tr td span.active.disabled:hover {
       color: #fff;
-      background-color: #1997c6;
-      border-color: #1997c6;
+      background-color: #0d6efd;
+      border-color: #0d6efd;
       text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); }
       .datepicker table tr td span.active:hover, .datepicker table tr td span.active:hover:hover, .datepicker table tr td span.active.disabled:hover, .datepicker table tr td span.active.disabled:hover:hover {
         color: #fff;
-        background-color: #157da4;
+        background-color: #076afc;
         border-color: #137499; }
       .datepicker table tr td span.active:focus, .datepicker table tr td span.active.nh, .datepicker table tr td span.active:hover:focus, .datepicker table tr td span.active:hover.nh, .datepicker table tr td span.active.disabled:focus, .datepicker table tr td span.active.disabled.nh, .datepicker table tr td span.active.disabled:hover:focus, .datepicker table tr td span.active.disabled:hover.nh {
         box-shadow: 0 0 0 0.2rem rgba(25, 151, 198, 0.5); }
       .datepicker table tr td span.active.disabled, .datepicker table tr td span.active:disabled, .datepicker table tr td span.active:hover.disabled, .datepicker table tr td span.active:hover:disabled, .datepicker table tr td span.active.disabled.disabled, .datepicker table tr td span.active.disabled:disabled, .datepicker table tr td span.active.disabled:hover.disabled, .datepicker table tr td span.active.disabled:hover:disabled {
         color: #fff;
-        background-color: #1997c6;
-        border-color: #1997c6; }
+        background-color: #0d6efd;
+        border-color: #0d6efd; }
       .datepicker table tr td span.active:not(:disabled):not(.disabled):active, .datepicker table tr td span.active:not(:disabled):not(.disabled).active,
       .show > .datepicker table tr td span.active.nj, .datepicker table tr td span.active:hover:not(:disabled):not(.disabled):active, .datepicker table tr td span.active:hover:not(:disabled):not(.disabled).active,
       .show > .datepicker table tr td span.active:hover.nj, .datepicker table tr td span.active.disabled:not(:disabled):not(.disabled):active, .datepicker table tr td span.active.disabled:not(:disabled):not(.disabled).active,
@@ -8919,7 +8919,7 @@ textarea {
       .show > .datepicker table tr td span.active.disabled:hover.nj {
         color: #fff;
         background-color: #137499;
-        border-color: #126c8d; }
+        border-color: #076afc; }
         .datepicker table tr td span.active:not(:disabled):not(.disabled):active:focus, .datepicker table tr td span.active:not(:disabled):not(.disabled).active:focus,
         .show > .datepicker table tr td span.active.nj:focus, .datepicker table tr td span.active:hover:not(:disabled):not(.disabled):active:focus, .datepicker table tr td span.active:hover:not(:disabled):not(.disabled).active:focus,
         .show > .datepicker table tr td span.active:hover.nj:focus, .datepicker table tr td span.active.disabled:not(:disabled):not(.disabled):active:focus, .datepicker table tr td span.active.disabled:not(:disabled):not(.disabled).active:focus,
@@ -8982,8 +8982,8 @@ textarea {
   white-space: nowrap;
   cursor: pointer;
   font-weight: 700 !important;
-  color: #1997c6 !important;
-  border-bottom-color: #1997c6 !important; }
+  color: #0d6efd !important;
+  border-bottom-color: #0d6efd !important; }
   .headerSortUp:after,
   .headerSortDown:after {
     display: inline-block;
@@ -9152,7 +9152,7 @@ textarea {
     border-top-color: rgba(255, 255, 255, 0.2); }
 
 .bpm {
-  background-color: #1997c6; }
+  background-color: #0d6efd; }
 
 .bpn {
   background-color: #1BC98E; }
@@ -9303,7 +9303,7 @@ canvas {
       width: 70px;
       margin-top: 0;
       margin-bottom: 0;
-      background-color: #30343e;
+      background-color: #252830;
       overflow-y: auto;
       -webkit-transform: translate3d(0, 0, 0); } }
   .ch .tooltip {
@@ -9369,7 +9369,8 @@ canvas {
       .bqk > .pa + .pa > .oy {
         border-left: 1px solid #252830; }
         .bqk > .pa + .pa > .oy.active, .bqk > .pa + .pa > .oy.active:focus, .bqk > .pa + .pa > .oy.active:hover, .bqk > .pa + .pa > .oy.active:active {
-          color: #495057;
+          border-left: 1px solid #0b5ed7;
+          color: #ffffff;
           background-color: #252830; }
           .bqk > .pa + .pa > .oy.active .bz, .bqk > .pa + .pa > .oy.active:focus .bz, .bqk > .pa + .pa > .oy.active:hover .bz, .bqk > .pa + .pa > .oy.active:active .bz {
             border-color: #252830; }

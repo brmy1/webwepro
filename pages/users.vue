@@ -2,7 +2,7 @@
   section
     b-container
       b-row(align-h="between")
-        b-col(cols="6")
+        b-col(cols="6" v-if="$route.path !== '/users/view'")
           header-default.mb-5(title="Usuários" description="WebwePRO")
 
         b-col(cols="auto" v-if="$route.path === '/users'")

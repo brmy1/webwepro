@@ -1,82 +1,68 @@
 <template lang="pug">
 div
   b-row
-      b-col(sm="12" md="6" v-if="listQtd > 0")
+      b-col(sm="12" md="6" v-if="usersListQtd > 0")
         br
         h5 Todos usuários
-        small Lista completa de usuários. {{ listQtd }}
+        small Lista completa de usuários. {{ usersListQtd }}
 
       b-col
         //- form-input(label="Pesquisar" description="Pesquisar todos usuarios." placeholder="Pesquisar")
 
   b-row.mt-4
-    b-col(v-if="loading === 'getList'")
+    b-col(v-if="usersLoading === 'getList'")
       p carregando
 
-    b-col(v-else-if="loading !== 'getList' && listQtd === 0")
+    b-col(v-else-if="usersLoading !== 'getList' && usersListQtd === 0")
       card-default
         .p-2
           h6 Nada encontrado por aqui.
 
-    b-col(v-else-if="listQtd > 0")
-      card-default(v-for="item in list" :key="item.uid")
+    b-col(v-else-if="usersListQtd > 0")
+      card-default(v-for="item in usersList" :key="item.uid")
         .row.align-items-center
           b-col(cols="3" md="2")
-            thumbnails-default(:size="60")
+            a(href="#" @click.prevent.stop="viewDocument(item.uid)")
+              thumbnails-default(:size="60")
           b-col
-            .ml-4(@click="viewDocument(item.uid)")
+            a.ml-4(href="#" @click.prevent.stop="viewDocument(item.uid)")
               h6.bold {{ item.name }}
               small {{ item.email }}
           //- b-col
             h6 Administrador
             small Permissão
           b-col(cols="auto")
-            b-spinner.me-3(small variant="primary" v-if="loading && item.uid === view")
+            b-spinner.me-3(small variant="primary" v-if="usersLoading && item.uid === view")
             b-dropdown(v-else size='md' variant='none' toggle-class='text-decoration-none' no-caret)
               template(#button-content)
                 span.bv.bds.text-white
               b-dropdown-item(@click="removeDocument(item.uid)") Remover
 
-  b-row(align-h="center" v-if="!loading && listQtd > 0")
+  b-row(align-h="center" v-if="!usersLoading && usersListQtd > 0")
     b-col(cols="auto")
       bottom-default.mt-5.mb-5(title="Exibir mais")
 
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
+import mixinUser from '@/mixins/users'
 
 export default {
   name: 'IndexPageUsers',
+  mixins: [mixinUser],
   data: () => ({
     view: ''
   }),
-  computed: {
-    ...mapGetters('modules/users', ['loading', 'list', 'listQtd', 'viewUser'])
-  },
-  mounted () {
-    this.getList()
-  },
   methods: {
     async viewDocument (uid) {
       this.view = uid
-      await this.getUser(uid)
-      this.$router.push({ path: '/users/view' })
+      await this.viewDocumentUser(uid)
     },
 
-    removeDocument (uid) {
-      const view = this.view = uid
-      this.remove(uid)
-        .then(() => { this.success('Usuário removido com sucesso.') })
-        .catch(() => {
-          this.error('Erro ao remover usuário.', {
-            text: 'Tentar novamente',
-            onClick: () => this.removeDocument(view)
-          })
-        })
-    },
-    ...mapActions('modules/users', ['getList', 'getUser', 'remove']),
-    ...mapActions('modules/notification', ['success', 'error'])
+    async removeDocument (uid) {
+      this.view = uid
+      await this.removeDocumentUser(uid)
+    }
   }
 }
 </script>

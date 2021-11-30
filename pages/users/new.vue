@@ -59,11 +59,15 @@ b-form
       b-form-group#fieldset-complement(description='Complemento, Loja, Casa, Apt.' label='Complemento' label-for='input-complement')
         b-form-input#input-complement(v-model='form.address.complement' trim)
 
-    b-col(sm="12" md="8" )
+    b-col(sm="12" md="5" )
+      b-form-group#fieldset-state(description='Estado.' label='Estado' label-for='input-state')
+        b-form-input#input-state(v-model='form.address.state' trim)
+
+    b-col(sm="12" md="4" )
       b-form-group#fieldset-city(description='Cidade.' label='Cidade' label-for='input-city')
         b-form-input#input-city(v-model='form.address.city' trim)
 
-    b-col(sm="12" md="4" )
+    b-col(sm="12" md="3" )
       b-form-group#fieldset-email(description='Número de endereço' label='Número' label-for='input-email')
         b-form-input#input-email(v-model='form.address.number' trim)
 
@@ -83,17 +87,18 @@ b-form
 
   b-row(align-h="end")
     b-col(cols="auto")
-      span(@click.prevent.stop="addUser()")
-        bottom-default.mt-5(title="Adicionar usuário")
+      button.btn.btn-primary.mt-5(type='button' @click.prevent.stop='addUser()')
+        span.spinner-border.spinner-border-sm(v-if="usersLoading === 'addUser'" role='status' aria-hidden='true')
+        | &nbsp;&nbsp;{{ usersLoading === 'addUser' ? 'Carregando' : 'Adicionar usuário' }}
 
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import mixinUsers from '@/mixins/users'
 
 export default {
   name: 'NewUserPage',
-  data: () => ({}),
+  mixins: [mixinUsers],
   computed: {
     formDefault () {
       return {
@@ -102,6 +107,7 @@ export default {
         birth: '',
         email: '',
         address: {
+          state: '',
           city: '',
           street: '',
           zip: '',
@@ -122,23 +128,9 @@ export default {
     form () { return { ...this.formDefault } }
   },
   methods: {
-    addUser () {
-      this.add(this.form).then(() => {
-        this.success('Usuário adicionado com sucesso.', {
-          text: 'Visualizar',
-          onClick: () => { this.$router.push({ path: 'users/uid_user_key_here' }) }
-        })
-      }).catch(() => {
-        this.error('Erro ao adicionar usuario.', {
-          text: 'Tentar novamente',
-          onClick: () => { this.addUser() }
-        })
-      }).finally(() => {
-        this.$router.go(-1)
-      })
-    },
-    ...mapActions('modules/users', ['add']),
-    ...mapActions('modules/notification', ['success', 'error'])
+    async addUser () {
+      await this.addDocumentUser(this.form)
+    }
   }
 }
 </script>
