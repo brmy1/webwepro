@@ -39,7 +39,7 @@ export default {
       await this.remove(uid)
         .then(() => {
           this.success('Usuário removido com sucesso.')
-          this.$store.commit('setViewDoc', false)
+          // this.$store.commit('modules/users/setViewDoc', false)
           if (redirectBack) {
             this.$router.go(-1)
           }

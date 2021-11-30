@@ -3,7 +3,7 @@
     b-container
       b-row(align-h="between")
         b-col(cols="6" v-if="$route.path !== '/users/view'")
-          header-default.mb-5(title="Usuários" description="WebwePRO")
+          header-default.mb-5(title="Usuários" description="Webwe PRO")
 
         b-col(cols="auto" v-if="$route.path === '/users'")
           n-link(to="/users/new")

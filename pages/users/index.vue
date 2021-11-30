@@ -1,5 +1,5 @@
 <template lang="pug">
-div
+b-container
   b-row
       b-col(sm="12" md="6" v-if="usersListQtd > 0")
         br
@@ -36,6 +36,7 @@ div
             b-dropdown(v-else size='md' variant='none' toggle-class='text-decoration-none' no-caret)
               template(#button-content)
                 span.bv.bds.text-white
+              b-dropdown-item(@click="viewDocument(item.uid)") Visualizar
               b-dropdown-item(@click="removeDocument(item.uid)") Remover
 
   b-row(align-h="center" v-if="!usersLoading && usersListQtd > 0")

@@ -37,7 +37,7 @@ section
               b-col(cols="2")
                 icon-default(icon="fi-rr-flag")
               b-col
-                p {{ doc.address.zip ? `${doc.address.zip}. ${doc.address.state}, ${doc.address.city}` : 'Endereço indisponível' }}
+                p {{ doc.address.zip ? `${doc.address.zip}. ${doc.address.state}, ${doc.address.city}.` : 'Endereço indisponível' }}
 
           card-default.mt-2
             b-row.mt-3
@@ -45,20 +45,6 @@ section
                 icon-default(icon="fi-rr-phone-call")
               b-col
                 p {{ doc.contact.tel1 || doc.contact.tel2 || 'Contato indisponível' }}
-
-          card-default
-            b-row.mt-3
-              b-col(cols="2")
-                icon-default(icon="fi-rr-cake-birthday")
-              b-col
-                p {{ doc.birth || 'Data de nascimento indisponível' }}
-
-          //- card-default
-            b-row.mt-3
-              b-col(cols="2")
-                icon-default(icon="fi-rr-key")
-              b-col
-                p {{ permission || 'Permissão do usuário indisponível' }}
 
     b-col(sm="12" md="7")
       b-row.g-2
@@ -92,10 +78,10 @@ section
           card-default.text-center
             icon-default.mt-2(icon="fi-rr-list-check" :size="1.4")
             h4.fw-bolder 254
-            h6.bqq.text-muted Relatorios
+            h6.bqq.text-muted Atividades
 
       card-default.mt-1
-        b-row.mt-3(style="height: 330px;")
+        b-row.mt-3(style="height: 228px;")
           b-col(cols="2")
             icon-default(icon="fi-rr-info")
           b-col

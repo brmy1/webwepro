@@ -102,25 +102,25 @@ export default {
   computed: {
     formDefault () {
       return {
-        name: '',
-        lastname: '',
-        birth: '',
-        email: '',
+        name: 'Fulano',
+        lastname: 'Silva Costa Junior',
+        birth: '01/01/2000',
+        email: 'fulanojunior@email.com',
         address: {
-          state: '',
-          city: '',
-          street: '',
-          zip: '',
-          number: '',
-          complement: ''
+          state: 'Espirito Santo',
+          city: 'Cascavél',
+          street: 'Brigadeiro',
+          zip: '12345678',
+          number: '231',
+          complement: 'Apt 231'
         },
         document: {
-          cpf: '',
-          rg: ''
+          cpf: '123.456.789-12',
+          rg: '123456789'
         },
         contact: {
-          tel1: '',
-          tel2: ''
+          tel1: '+55 28 0 12345678',
+          tel2: '+55 28 12345678'
         }
       }
     },

@@ -21,34 +21,6 @@ section
       b-col
         list-basic(title="Movimentação geral" :list="list")
 
-    b-row
-      .col
-        br
-        h4 Extrato
-        p Extrato detalhado. Abaixo uma lista com os ultimos 6 itens de cada categoria. (Avançado)
-
-    b-row.g-2
-      b-col(sm="12" md="4")
-        list-basic(title="Entrada geral" :list="gain")
-      b-col(sm="12" md="4")
-        list-basic(title="Saida geral" :list="loss")
-      b-col(sm="12" md="4")
-        list-basic(title="Folha de pagamento" :list="money")
-
-      b-col(sm="6" md="3")
-        list-basic(title="Entradas em dinheiro" :list="money")
-      b-col(sm="6" md="3")
-        list-basic(title="Entradas em Débito" :list="debit")
-      b-col(sm="6" md="3")
-        list-basic(title="Entradas em Crédito" :list="credit")
-      b-col(sm="6" md="3")
-        list-basic(title="Outras metodos de entrada" :list="gain")
-
-    //- .row
-      .col
-        br
-        h4 Grafico
-        p Grafico completo de movimentações.
 </template>
 
 <script>
