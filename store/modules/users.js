@@ -73,33 +73,29 @@ const actions = {
 
   async add ({ commit }, form) {
     commit('setLoading', 'addUser')
-    const job = await Document.add(form, 'users', {
-      success: 'Usuário adicionado com sucesso.',
-      error: 'Erro ao adicionar usuario, por favor, tente novamente mais tarde.'
-    })
+    const job = await Document.add(form, 'users')
     commit('setLoading', false)
     return job
   },
 
-  async edit ({ commit }, form, uid) {
-    commit('setLoading', 'edituser')
-    const job = await Document.edit(form, uid, 'users', {
-      success: 'Usuário editado com sucesso.',
-      error: 'Erro ao editar usuario, por favor, tente novamente mais tarde.'
-    })
+  async att ({ commit }, uid, form) {
+    commit('setLoading', 'attUser')
+    const job = await Document.att(uid, 'users', form)
     commit('setLoading', false)
     return job
   },
 
   async remove ({ commit, dispatch }, uid) {
-    commit('setLoading', 'removeUser')
-    await Document.remove(uid, 'users', {
-      success: 'Usuario removido com sucesso',
-      error: 'Erro ao remover usuario'
-    })
-    dispatch('getList')
-    commit('setLoading', false)
-    return true
+    try {
+      commit('setLoading', 'removeUser')
+      await Document.remove(uid, 'users')
+      dispatch('getList')
+      commit('setLoading', false)
+      return true
+    } catch {
+      commit('setLoading', false)
+      return false
+    }
   }
 }
 

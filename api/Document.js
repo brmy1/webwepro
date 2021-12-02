@@ -1,6 +1,4 @@
 /* eslint-disable no-console */
-/* eslint-disable node/handle-callback-err */
-/* eslint-disable no-unused-expressions */
 
 import {
   doc,
@@ -9,6 +7,7 @@ import {
   getDocs,
   getDoc,
   addDoc,
+  updateDoc,
   deleteDoc,
   query
 } from 'firebase/firestore'
@@ -18,7 +17,7 @@ class Document {
     return null
   }
 
-  // Visualizar um unico documento
+  // view one document
   async viewOne (uid, collectionName, msg) {
     const db = getFirestore()
     const docRef = doc(db, collectionName, uid)
@@ -31,12 +30,12 @@ class Document {
         path: collectionName
       })
     } else {
-      return msg.error
+      return 'Documento inexistente.'
     }
   }
 
-  // Visualizar lista completa de uma coleção
-  async viewList (collectionName, quantity, msg) {
+  // view list of documents
+  async viewList (collectionName, quantity) {
     const list = []
 
     const db = getFirestore()
@@ -54,29 +53,40 @@ class Document {
     return list
   }
 
-  // Adicionar documento a uma coleção
-  async add (form, collectionName, msg) {
+  // add document in collection
+  async add (form, collectionName) {
     const db = getFirestore()
     try {
-      await addDoc(collection(db, collectionName), form)
-      return msg.success
+      const job = await addDoc(collection(db, collectionName), form)
+      return job
     } catch (e) {
-      return msg.error
+      return e
     }
   }
 
-  // Editar um documento já existente
-  async edit (form, uid, collection) {}
+  // add document
+  async att (uid, collectionName, form) {
+    const db = getFirestore()
+    const docRef = doc(db, collectionName, uid)
 
-  // Remover um documento existente
-  async remove (uid, collectionName, msg) {
+    try {
+      const job = await updateDoc(docRef, { ...form })
+      console.log(job)
+      return job
+    } catch (e) {
+      return e
+    }
+  }
+
+  // remove document
+  async remove (uid, collectionName) {
     const db = getFirestore()
 
     try {
-      await deleteDoc(doc(db, collectionName, uid))
-      return msg.success
+      const job = await deleteDoc(doc(db, collectionName, uid))
+      return job
     } catch (e) {
-      return msg.error
+      return e
     }
   }
 }

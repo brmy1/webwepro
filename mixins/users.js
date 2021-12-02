@@ -34,7 +34,27 @@ export default {
       await this.getUser(uid)
       this.$router.push({ path: '/users/view' })
     },
-    async editDocumentUser (uid) {},
+    async goEditDocumentUser (uid) {
+      await this.getUser(uid)
+      this.$router.push({ path: '/users/edit' })
+    },
+    async attDocumentUser (uid, form) {
+      await this.att(uid, form).then(() => {
+        this.getList()
+        this.getUser(uid)
+        this.success('Usuário atualizado com sucesso.', {
+          text: 'Visualizar',
+          onClick: () => { this.$router.push({ path: 'users/view' }) }
+        })
+      }).catch(() => {
+        this.error('Erro ao atualizar usuario.', {
+          text: 'Tentar novamente',
+          onClick: () => { this.attDocumentUser(uid, form) }
+        })
+      }).finally(() => {
+        this.$router.go(-1)
+      })
+    },
     async removeDocumentUser (uid, redirectBack) {
       await this.remove(uid)
         .then(() => {
@@ -51,7 +71,7 @@ export default {
           })
         })
     },
-    ...mapActions('modules/users', ['add', 'getList', 'getUser', 'remove']),
+    ...mapActions('modules/users', ['add', 'att', 'getList', 'getUser', 'remove']),
     ...mapActions('modules/notification', ['success', 'error'])
   }
 }

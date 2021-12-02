@@ -37,6 +37,7 @@ b-container
               template(#button-content)
                 span.bv.bds.text-white
               b-dropdown-item(@click="viewDocument(item.uid)") Visualizar
+              b-dropdown-item(@click="goEditDocumentUser(item.uid)") Editar
               b-dropdown-item(@click="removeDocument(item.uid)") Remover
 
   b-row(align-h="center" v-if="!usersLoading && usersListQtd > 0")
@@ -58,6 +59,11 @@ export default {
     async viewDocument (uid) {
       this.view = uid
       await this.viewDocumentUser(uid)
+    },
+
+    async editDocument (uid) {
+      this.view = uid
+      await this.editDocumentUser(uid)
     },
 
     async removeDocument (uid) {

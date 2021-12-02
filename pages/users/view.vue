@@ -15,7 +15,7 @@ section
         b-col(cols="6")
           a.d-flex.fw-bold(href="_" @click.prevent.stop="$router.go(-1)") Voltar
         b-col(cols="3")
-          a.d-flex.text-muted(href="#")
+          a.d-flex.text-muted(href="#" @click.prevent.stop="goEditDocumentUser(uid)")
             icon-default(icon="fi-rr-edit" :size="0.8")
             small.mt-1 Editar
         b-col(cols="3")
